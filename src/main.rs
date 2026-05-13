@@ -2,6 +2,8 @@ use rand::RngExt;
 use std::cmp::Ordering;
 use std::io;
 /// this shit down here
+
+
 fn main() {
     println!("Guess the number!");
 
@@ -24,7 +26,11 @@ fn main() {
     match guess.cmp(&secret_number) {
         Ordering::Less => println!("Too small!"),
         Ordering::Greater => println!("Too big!"),
-        Ordering::Equal => eprintln!("You win!"),
-
+        Ordering::Equal => println!("You win!"),
     }
+    beans()
+}
+
+fn beans() {
+    println!("Beans!");
 }
