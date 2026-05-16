@@ -1,3 +1,5 @@
+mod Cat;
+
 use rand::RngExt;
 use std::cmp::Ordering;
 use std::io;
@@ -31,6 +33,7 @@ fn main() {
     }
     this_is_a_value(); //ass
     referr();
+    Cat::what() //running external file
 }
 fn this_is_a_value() {
     let cheese= 15;
