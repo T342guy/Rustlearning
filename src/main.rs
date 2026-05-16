@@ -2,7 +2,8 @@ use rand::RngExt;
 use std::cmp::Ordering;
 use std::io;
 /// this shit down here
-
+// you dont say?
+// quite literally a toilet bowl
 
 fn main() {
     println!("Guess the number!");
@@ -28,9 +29,25 @@ fn main() {
         Ordering::Greater => println!("Too big!"),
         Ordering::Equal => println!("You win!"),
     }
-    beans()
+    this_is_a_value(); //ass
+    referr();
+}
+fn this_is_a_value() {
+    let cheese= 15;
+    println!("The value of your cheese is {}", cheese);
+    anothervalue(cheese) // idk i just like cheese okay?
 }
 
-fn beans() {
-    println!("Beans!");
+fn anothervalue(a: i32) {
+    let a = a - 2;
+    println!("The value of your apple is {}", a); // ?!?!?!?!
+}
+// i have no idea what im doing but this is awesome
+fn referr() {
+    let x = 1;
+    let _ilend = iget(&x); // The borrow is passed and ran first <--
+    println!("look X marks the {}", x) // this is ran last after the borrow
+}
+fn iget(deez: &i32) {
+    println!("Deez is {}", deez);
 }
