@@ -6,7 +6,7 @@ use std::io;
 /// this shit down here
 // you dont say?
 // quite literally a toilet bowl
-
+/*
 fn main() {
     println!("Guess the number!");
 
@@ -33,7 +33,7 @@ fn main() {
     }
     this_is_a_value(); //ass
     referr();
-    Cat::what() //running external file
+    Cat::what(); //running external file
 }
 fn this_is_a_value() {
     let cheese= 15;
@@ -53,4 +53,30 @@ fn referr() {
 }
 fn iget(deez: &i32) {
     println!("Deez is {}", deez);
+}
+
+fn nest() {
+    pub fn birb() {
+        println!("Birb");
+    }
+} */
+
+use clap::Parser;
+
+#[derive(Parser)]
+#[command(name = "MyApp")]
+#[command(version = "1.0")]
+#[command(about = "Does awesome things", long_about = None)]
+struct Cli {
+    #[arg(long)]
+    two: String,
+    #[arg(long)]
+    one: String,
+}
+
+fn main() {
+    let cli = Cli::parse();
+
+    println!("two: {:?}", cli.two);
+    println!("one: {:?}", cli.one);
 }
