@@ -1,4 +1,4 @@
-mod Cat;
+mod cat;
 
 use rand::RngExt;
 use std::cmp::Ordering;
@@ -6,14 +6,12 @@ use std::io;
 /// this shit down here
 // you dont say?
 // quite literally a toilet bowl
-/*
 fn main() {
     println!("Guess the number!");
 
     let secret_number = rand::rng().random_range(1..=100);
 
     println!("The number is {}", secret_number);
-
     println!("Put in the guess");
 
     let mut guess = String::new();
@@ -33,7 +31,9 @@ fn main() {
     }
     this_is_a_value(); //ass
     referr();
-    Cat::what(); //running external file
+    cat::main("beans"); //running external file
+    let returnval = cat::returnval(6);
+    println!("The returned value is {}", returnval);
 }
 fn this_is_a_value() {
     let cheese= 15;
@@ -59,24 +59,4 @@ fn nest() {
     pub fn birb() {
         println!("Birb");
     }
-} */
-
-use clap::Parser;
-
-#[derive(Parser)]
-#[command(name = "MyApp")]
-#[command(version = "1.0")]
-#[command(about = "Does awesome things", long_about = None)]
-struct Cli {
-    #[arg(long)]
-    two: String,
-    #[arg(long)]
-    one: String,
-}
-
-fn main() {
-    let cli = Cli::parse();
-
-    println!("two: {:?}", cli.two);
-    println!("one: {:?}", cli.one);
 }
